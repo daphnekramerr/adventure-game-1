@@ -32,7 +32,7 @@ function startgame(){
     description.innerHTML = "Which destination do you want to go? <br> Click on the buttons to see pictures"
     button1.setAttribute("onclick", "bali()");
     button1.innerHTML = "Bali";
-    button2.innerHTML = "Marocco";
+    button2.innerHTML = "Morocco";
     button2.setAttribute("onclick", "morocco()");
     image.src = "img/travel.jpg"
     document.getElementById("button2").style.display = "inline";
@@ -43,7 +43,7 @@ function bali(){
     description.innerHTML = "Which destination do you want to go? <br> Click Bali again to choose this destination"
     image.src = "img/bali.jpg"
     button1.innerHTML = "Bali";
-    button2.innerHTML = "Marocco";
+    button2.innerHTML = "Morocco";
     button1.setAttribute("onclick", "level1Bali()");
     button2.setAttribute("onclick", "morocco()");
     document.getElementById("button2").style.display = "inline";
@@ -54,7 +54,7 @@ function morocco(){
     description.innerHTML = "Which destination do you want to go? <br> Click Morocco again to choose this destination"
     image.src = "img/marokko.jpg"
     button1.innerHTML = "Bali";
-    button2.innerHTML = "Marocco";
+    button2.innerHTML = "Morocco";
     button1.setAttribute("onclick", "bali()");
     button2.setAttribute("onclick", "morocco()");
     document.getElementById("button2").style.display = "inline";
@@ -94,7 +94,7 @@ function plane(){
 function eat(){
     title.innerHTML = "Airport";
     description.innerHTML = "You're going to a restaurant to get some food. After you eat, you feel very nauseous. You have some options to do, choose wisely.";
-    image.src = "img/airport.jpg";
+    image.src = "img/restaurant.jpg";
     button1.innerHTML = "Go back to the gate";
     button2.innerHTML = "Go to the first-aid";
     if (hasMedicine){
@@ -152,7 +152,7 @@ function gate(){
 
 function gameOver(){
     title.innerHTML = "Game over!";
-    description.innerHTML = "It was a stupid option to go by foot to Bali. You didn't made it. That's the end of your holiday..";
+    description.innerHTML = "It was a stupid option to go by foot to Bali. You didn't make it. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
