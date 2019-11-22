@@ -50,7 +50,7 @@ function bali(){
 }
 
 function morocco(){
-    title.innerHTML = "Marocco";
+    title.innerHTML = "Morocco";
     description.innerHTML = "Which destination do you want to go? <br> Click Morocco again to choose this destination"
     image.src = "img/marokko.jpg"
     button1.innerHTML = "Bali";
@@ -233,6 +233,7 @@ function medicine(){
     inventoryText.innerHTML = "Inventory";
     document.getElementById("inventoryItem").style.display = "block";
     document.getElementById("inventorytext").style.display = "block";
+    console.log("You picked up a medicine-kit.");
 }
 
 function book(){
@@ -243,4 +244,5 @@ function book(){
     inventoryText.innerHTML = "Inventory";
     document.getElementById("inventoryItem").style.display = "block";
     document.getElementById("inventorytext").style.display = "block";
+    console.log("You picked up a book.");
 }
