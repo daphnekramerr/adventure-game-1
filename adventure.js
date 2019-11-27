@@ -56,10 +56,12 @@ function morocco(){
     button1.innerHTML = "Bali";
     button2.innerHTML = "Morocco";
     button1.setAttribute("onclick", "bali()");
-    button2.setAttribute("onclick", "morocco()");
+    button2.setAttribute("onclick", "level1Morocco()");
     document.getElementById("button2").style.display = "inline";
 }
 
+
+// Vanaf hier komen de functies voor de optie "Bali"
 
 function level1Bali(){
     title.innerHTML = "Bali";
@@ -113,7 +115,6 @@ function eat(){
     
 }
 
-
 function hallway(){
     title.innerHTML = "Airport";
     description.innerHTML = "You're on your way to the gate and you see a book on the ground. Are going to pick it up? If you do, you have to leave the items you picked up earlier behind and can't use it anymore.";
@@ -128,7 +129,6 @@ function hallway(){
     document.getElementById("inventorytext").style.display = "none";
 
 }
-
 
 function gate(){
     title.innerHTML = "Airport";
@@ -150,6 +150,101 @@ function gate(){
     document.getElementById("book").style.display = "none";
 }
 
+function ship(){
+    title.innerHTML = "Harber";
+    description.innerHTML = "You're going to Bali with a big cruise ship. During you trip to the harbor there was a traffic jam. You are really late at the harbor adn you see 2 ships. You don't know which one you have to take. So which one are you going to choose?";
+    image.src = "";
+    button1.innerHTML = "The left one";
+    button2.innerHTML = "The right one";
+    button1.setAttribute("onclick", "gameOver5()");
+    button2.setAttribute("onclick", "right()");
+    document.getElementById("button3").style.display = "none";
+}
+
+function right(){
+    title.innerHTML = "Harber";
+    description.innerHTML = "You choose the right ship! You're on board now and want to kill some time. What are you going to do?";
+    image.src = "";
+    button1.innerHTML = "Get something to eat.";
+    button2.innerHTML = "Take a nape.";
+    button1.setAttribute("onclick", "gameOver6()");
+    button2.setAttribute("onclick", "nape()");
+    document.getElementById("button3").style.display = "none";
+}
+
+function nape(){
+    title.innerHTML = "";
+    description.innerHTML = "You took a very long time nape, when you woke up the ship is at the first stop. Do you want to get off the ship to explore the city?";
+    image.src = "";
+    button1.innerHTML = "Yes";
+    button2.innerHTML = "No";
+    button1.setAttribute("onclick", "gameOver7()");
+    button2.setAttribute("onclick", "win2()");
+    document.getElementById("button3").style.display = "none";
+}
+
+// Vanaf hier komen de functies voor optie "Marokko"
+
+function level1Morocco(){
+    title.innerHTML = "Morocco";
+    description.innerHTML = "You choose to go to Morocco! How do you want to travel to Morocco?";
+    image.src = "";
+    button1.innerHTML = "By ship";
+    button2.innerHTML = "By plane";
+    button3.innerHTML = "By car";
+    button1.setAttribute("onclick", "shipMar()");
+    button2.setAttribute("onclick", "planeMar()");
+    button3.setAttribute("onclick", "car()");
+    document.getElementById("button3").style.display = "inline";
+}
+
+function planeMar(){
+    title.innerHTML = "Morocco";
+    description.innerHTML = "You're going to Morocoo by plane. At the incheck desk they ask you to rebook you ticket, so you can leave right away. What are you going to do?";
+    image.src = "";
+    button1.innerHTML = "Rebook ticket";
+    button2.innerHTML = "Do nothing";
+    button1.setAttribute("onclick", "gameOver8()");
+    button2.setAttribute("onclick", "doNothing()");
+    document.getElementById("button3").style.display = "none";
+}
+
+function doNothing(){
+    title.innerHTML = "Hallway";
+    description.innerHTML = "You're going to go to some tax-free shops. How many are you going to visit?";
+    image.src = "img/airport.jpg";
+    button1.innerHTML = "Click on the button";
+    button1.setAttribute("onclick", "input()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function input(){
+    var answer = prompt();
+    if (answer <= 3){
+        phone();
+    }
+    else if (answer > 3){
+        gameOver9();
+    }
+}
+
+function phone(){
+    title.innerHTML = "Morocco";
+    description.innerHTML = "You went to a few shops and were on time for you flight. The plane is flying and you are in you seatbelt. You remember that you left your phone in your suitcase. Are you going to get it?";
+    image.src = "";
+    button1.innerHTML = "Stay in your seat";
+    button2.innerHTML = "Get phone";
+    button1.setAttribute("onclick", "win3()");
+    button2.setAttribute("onclick", "gameOver10()");
+    document.getElementById("button3").style.display = "none";
+    document.getElementById("button2").style.display = "inline";
+}
+
+
+
+// Vanaf hier komen alle gameOver functies
+
 function gameOver(){
     title.innerHTML = "Game over!";
     description.innerHTML = "It was a stupid option to go by foot to Bali. You didn't make it. That's the end of your holiday..";
@@ -159,7 +254,6 @@ function gameOver(){
     document.getElementById("button2").style.display = "none";
     document.getElementById("button3").style.display = "none";
 }
-
 
 function gameOver1(){
     title.innerHTML = "Game over!";
@@ -204,6 +298,68 @@ function gameOver4(){
     document.getElementById("button3").style.display = "none";
 }
 
+function gameOver5(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You choose the wrong one, the other ship left before you could enter. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver6(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You went to eat something. You became really sick. With the next stop you went off board to go to the hospital. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver7(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You went into the city. When you came back at the ship you have to show you're passport again, but your passport is still on the ship. You can't enter the ship anymore.. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver8(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You rebooked you flight, you had to run to your gate, you only had 5 minutes left but you were to late. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver9(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You went shopping to long. You missed your flight. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver10(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You went to grabe your phone. The suitcase falls on you head and you're unconsious. You wake up in an hospital in the Netherlands.. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+// Vanaf hier komen alle win functies
+
 function win(){
     title.innerHTML = "You won!";
     description.innerHTML = "You used some medicine from the medicine-kit and felt better. You were on time at the gate for you flight and your holiday is about to start!";
@@ -225,6 +381,18 @@ function win1(){
     document.getElementById("button2").style.display = "none";
     document.getElementById("button3").style.display = "none";
 }
+
+function win2(){
+    title.innerHTML = "You won!";
+    description.innerHTML = "You decided not to get off the ship. Your journey continues undisturbed. Have a nice holiday!";
+    image.src = "";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+// Vanaf hier komen alle inventory item functies
 
 function medicine(){
     hasMedicine = true;
