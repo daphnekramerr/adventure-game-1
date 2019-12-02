@@ -4,11 +4,11 @@ var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var inventoryText = document.getElementById("inventorytext");
 var description = document.getElementById("description");
-var image = document.getElementById("images")
+var image = document.getElementById("images");
 
 const levels = [
     {description : "Welcome to my adventure game. You're going to make a trip and will face some obstacles. <br> Make the right choice to arrive at your final destination",
-title : "Traveller", button1 : "Start game", button2 : "", button3 : "", image : "img/travel.jpg"},
+title : "Traveller", button1 : "Start game", button2 : "", button3 : "", image : "img/travel.jpg", },
 
 {description : "Which destination do you want to go?",
 title : "Where are you going to?", button1 : "Bali", button2 : "Morocco", button3: "", image : "img/travel.jpg"},
@@ -21,8 +21,21 @@ title : "Airport", button1 : "Get something to eat", button2 : "Go to the gate",
 
 ]
 
+const levels1 = [
+    {description : "asfd",
+    title : "Morocco", button1 : "asdf", button2 : "asdf", button3 : "", image : "", },
+    {description : "",
+    title : "", button1 : "", button2 : "", button3 : "", image : "", },
+    {description : "",
+    title : "", button1 : "", button2 : "", button3 : "", image : "", },
+    {description : "",
+    title : "", button1 : "", button2 : "", button3 : "", image : "", }
+]
+
 
 var levelCount = 0;
+var levelCount1 = 1;
+var levelCount2 = 0;
 
 
 function level(){
@@ -37,9 +50,11 @@ function level(){
 
     image.src = levels[levelCount].image;
     levelCount = levelCount +1;
+    levelCount1 = levelCount1 +1;
+    levelCount2 = levelCount2 +1;
     button1.setAttribute("onclick", "level()");
-    button2.setAttribute("onclick", "level()");
-    button2.setAttribute("onclick", "level()");
+    button2.setAttribute("onclick", "level1()");
+    button3.setAttribute("onclick", "level2()");
 
 
     if (button2.innerHTML == ""){
@@ -56,3 +71,20 @@ function level(){
     }
 }
 level();
+
+function level1(){
+    title.innerHTML = levels1[levelCount1].title;
+    description.innerHTML = levels1[levelCount1].description;
+
+    button1.innerHTML = levels1[levelCount1].button1;
+    button2.innerHTML = levels1[levelCount1].button2;
+    button3.innerHTML = levels1[levelCount1].button3;
+
+    image.src = levels1[levelCount1].image;
+    levelCount = levelCount +1;
+    levelCount1 = levelCount1 +1;
+    levelCount2 = levelCount2 +1;
+    button1.setAttribute("onclick", "level()");
+    button2.setAttribute("onclick", "level1()");
+    button2.setAttribute("onclick", "level2()");
+}
