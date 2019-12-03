@@ -15,8 +15,8 @@ function begin(){
     description.innerHTML = "Welcome to my adventure game. You're going to make a trip and will face some obstacles. <br> Make the right choice to arrive at your final destination"
     button1.setAttribute("onclick", "startgame()");
     button1.innerHTML = "Start game";
-    document.getElementById("button2").style.display = "none";
-    document.getElementById("button3").style.display = "none";
+    button2.style.display = "none";
+    button3.style.display = "none";
     image.src = "img/travel.jpg";
     hasMedicine = false;
     hasBook = false;
@@ -243,7 +243,7 @@ function phone(){
 
 function shipMar(){
     title.innerHTML = "Morocco";
-    description.innerHTML = "You decided to go to Morocco by ship! You arrive at the harbor and see that you ship is delayed. Are going to wait for the ship or go to the ciry to kill the time?";
+    description.innerHTML = "You decided to go to Morocco by ship! You arrive at the harbour and see that you ship is delayed. Are going to wait for the ship or go to the ciry to kill the time?";
     image.src = "";
     button1.innerHTML = "Wait for the ship";
     button2.innerHTML = "Go in to the city";
@@ -478,7 +478,7 @@ function win3(){
 
 function win4(){
     title.innerHTML = "You won!";
-    description.innerHTML = "You went to just a few shops and were on time at the harbor again. Have a nice holiday!";
+    description.innerHTML = "You went to just a few shops and were on time at the harbour again. Have a nice holiday!";
     image.src = "";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
