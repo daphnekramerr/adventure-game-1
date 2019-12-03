@@ -188,20 +188,20 @@ function nape(){
 function level1Morocco(){
     title.innerHTML = "Morocco";
     description.innerHTML = "You choose to go to Morocco! How do you want to travel to Morocco?";
-    image.src = "";
+    image.src = "img/planeship.jpg";
     button1.innerHTML = "By ship";
     button2.innerHTML = "By plane";
     button3.innerHTML = "By car";
     button1.setAttribute("onclick", "shipMar()");
     button2.setAttribute("onclick", "planeMar()");
-    button3.setAttribute("onclick", "car()");
+    button3.setAttribute("onclick", "gameOver13()");
     document.getElementById("button3").style.display = "inline";
 }
 
 function planeMar(){
-    title.innerHTML = "Morocco";
+    title.innerHTML = "Rebook ticket";
     description.innerHTML = "You're going to Morocoo by plane. At the incheck desk they ask you to rebook you ticket, so you can leave right away. What are you going to do?";
-    image.src = "";
+    image.src = "img/desk.jpg";
     button1.innerHTML = "Rebook ticket";
     button2.innerHTML = "Do nothing";
     button1.setAttribute("onclick", "gameOver8()");
@@ -230,9 +230,9 @@ function input(){
 }
 
 function phone(){
-    title.innerHTML = "Morocco";
+    title.innerHTML = "Phone";
     description.innerHTML = "You went to a few shops and were on time for you flight. The plane is flying and you are in you seatbelt. You remember that you left your phone in your suitcase. Are you going to get it?";
-    image.src = "";
+    image.src = "img/plane.jpg";
     button1.innerHTML = "Stay in your seat";
     button2.innerHTML = "Get phone";
     button1.setAttribute("onclick", "win3()");
@@ -241,6 +241,49 @@ function phone(){
     document.getElementById("button2").style.display = "inline";
 }
 
+function shipMar(){
+    title.innerHTML = "Morocco";
+    description.innerHTML = "You decided to go to Morocco by ship! You arrive at the harbor and see that you ship is delayed. Are going to wait for the ship or go to the ciry to kill the time?";
+    image.src = "";
+    button1.innerHTML = "Wait for the ship";
+    button2.innerHTML = "Go in to the city";
+    button1.setAttribute("onclick", "wait()");
+    button2.setAttribute("onclick", "city()");
+    document.getElementById("button3").style.display = "none";
+    document.getElementById("button2").style.display = "inline";
+}
+
+function city(){
+    title.innerHTML = "City";
+    description.innerHTML = "You went into the city. How many shops are you going to visit?";
+    image.src = "";
+    button1.innerHTML = "Click on the button";
+    button1.setAttribute("onclick", "input1()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function input1(){
+    var answer = prompt();
+    if (answer <= 3){
+        win4();
+    }
+    else if (answer > 3){
+        gameOver11();
+    }
+}
+
+function wait(){
+    title.innerHTML = "Waiting..";
+    description.innerHTML = "You've waited an hour for the ship but when it arrived you remembered that you forgot your bag in your car.";
+    image.src = "";
+    button1.innerHTML = "Get your bag";
+    button2.innerHTML = "Get on board of the ship";
+    button1.setAttribute("onclick", "gameOver12()");
+    button2.setAttribute("onclick", "win5()");
+    document.getElementById("button3").style.display = "none";
+    document.getElementById("button2").style.display = "inline";
+}
 
 
 // Vanaf hier komen alle gameOver functies
@@ -358,6 +401,37 @@ function gameOver10(){
     document.getElementById("button3").style.display = "none";
 }
 
+function gameOver11(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You went shopping to long. You missed your ship. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver12(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You ran to your car to get your bag, but when you arrive at the ship again, it's to late to get on board. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function gameOver13(){
+    title.innerHTML = "Game over!";
+    description.innerHTML = "You decided to go to Morocco by car but halfway through your car broke down.. That's the end of your holiday..";
+    image.src = "img/gameover.jpg";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+
 // Vanaf hier komen alle win functies
 
 function win(){
@@ -385,6 +459,36 @@ function win1(){
 function win2(){
     title.innerHTML = "You won!";
     description.innerHTML = "You decided not to get off the ship. Your journey continues undisturbed. Have a nice holiday!";
+    image.src = "";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function win3(){
+    title.innerHTML = "You won!";
+    description.innerHTML = "You stayed in your seat and nothing happened. Your journey continues undisturbed. Have a nice holiday!";
+    image.src = "";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function win4(){
+    title.innerHTML = "You won!";
+    description.innerHTML = "You went to just a few shops and were on time at the harbor again. Have a nice holiday!";
+    image.src = "";
+    button1.innerHTML = "Play again";
+    button1.setAttribute("onclick", "begin()");
+    document.getElementById("button2").style.display = "none";
+    document.getElementById("button3").style.display = "none";
+}
+
+function win5(){
+    title.innerHTML = "You won!";
+    description.innerHTML = "You got on board of the ship, only without your bag. But you journey continues undisturbed. Have a nice holiday!";
     image.src = "";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
