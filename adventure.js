@@ -26,7 +26,6 @@ function begin(){
 begin();
 
 
-
 function startgame(){
     title.innerHTML = "Where are you going to?"
     description.innerHTML = "Which destination do you want to go? <br> Click on the buttons to see pictures"
@@ -35,7 +34,7 @@ function startgame(){
     button2.innerHTML = "Morocco";
     button2.setAttribute("onclick", "morocco()");
     image.src = "img/travel.jpg"
-    document.getElementById("button2").style.display = "inline";
+    button2.style.display = "inline";
 }
 
 function bali(){
@@ -46,7 +45,7 @@ function bali(){
     button2.innerHTML = "Morocco";
     button1.setAttribute("onclick", "level1Bali()");
     button2.setAttribute("onclick", "morocco()");
-    document.getElementById("button2").style.display = "inline";
+    button2.style.display = "inline";
 }
 
 function morocco(){
@@ -57,7 +56,7 @@ function morocco(){
     button2.innerHTML = "Morocco";
     button1.setAttribute("onclick", "bali()");
     button2.setAttribute("onclick", "level1Morocco()");
-    document.getElementById("button2").style.display = "inline";
+    button2.style.display = "inline";
 }
 
 
@@ -73,7 +72,7 @@ function level1Bali(){
     button1.setAttribute("onclick", "plane()");
     button2.setAttribute("onclick", "ship()");
     button3.setAttribute("onclick", "gameOver()");
-    document.getElementById("button3").style.display = "inline";
+    button3.style.display = "inline";
 
 }
 
@@ -111,7 +110,7 @@ function eat(){
         button2.setAttribute("onclick", "gameOver4()");
     }
     button1.setAttribute("onclick", "gameOver2()");
-    document.getElementById("button3").style.display = "none";
+    button3.style.display = "none";
     
 }
 
@@ -123,8 +122,8 @@ function hallway(){
     button1.setAttribute("onclick", "gate()");
     document.getElementById("book").style.display = "block";
     document.getElementById("inventorytext").style.display = "block";
-    document.getElementById("button3").style.display = "none";
-    document.getElementById("button2").style.display = "none";
+    button2.style.display = "none";
+    button3.style.display = "none";
     document.getElementById("medicine").style.display = "none";
     document.getElementById("inventorytext").style.display = "none";
 
@@ -140,11 +139,11 @@ function gate(){
         button2.setAttribute("onclick", "win1()");
         document.getElementById("inventoryItem").style.display = "block";
         document.getElementById("inventorytext").style.display = "block";
-        document.getElementById("button2").style.display = "inline";
+        button2.style.display = "inline";
     }
     else{
-        document.getElementById("button2").style.display = "none";
-        document.getElementById("button3").style.display = "none";
+        button2.style.display = "none";
+        button3.style.display = "none";
     }
     button1.setAttribute("onclick", "gameOver3()");
     document.getElementById("book").style.display = "none";
@@ -166,13 +165,13 @@ function right(){
     description.innerHTML = "You choose the right ship! You're on board now and want to kill some time. What are you going to do?";
     image.src = "";
     button1.innerHTML = "Get something to eat.";
-    button2.innerHTML = "Take a nape.";
+    button2.innerHTML = "Take a nap.";
     button1.setAttribute("onclick", "gameOver6()");
-    button2.setAttribute("onclick", "nape()");
-    document.getElementById("button3").style.display = "none";
+    button2.setAttribute("onclick", "nap()");
+    button3.style.display = "none";
 }
 
-function nape(){
+function nap(){
     title.innerHTML = "";
     description.innerHTML = "You took a very long time nape, when you woke up the ship is at the first stop. Do you want to get off the ship to explore the city?";
     image.src = "";
@@ -180,7 +179,7 @@ function nape(){
     button2.innerHTML = "No";
     button1.setAttribute("onclick", "gameOver7()");
     button2.setAttribute("onclick", "win2()");
-    document.getElementById("button3").style.display = "none";
+    button3.style.display = "none";
 }
 
 // Vanaf hier komen de functies voor optie "Marokko"
