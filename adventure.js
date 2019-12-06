@@ -11,6 +11,7 @@ var hasMedicine = false;
 var hasBook = false;
 
 function begin(){
+    console.log(title);
     title.innerHTML = "Traveller"
     description.innerHTML = "Welcome to my adventure game. You're going to make a trip and will face some obstacles. <br> Make the right choice to arrive at your final destination"
     button1.setAttribute("onclick", "startgame()");
@@ -27,6 +28,7 @@ begin();
 
 
 function startgame(){
+    console.log(title);
     title.innerHTML = "Where are you going to?"
     description.innerHTML = "Which destination do you want to go? <br> Click on the buttons to see pictures"
     button1.setAttribute("onclick", "bali()");
@@ -38,6 +40,7 @@ function startgame(){
 }
 
 function bali(){
+    console.log(title);
     title.innerHTML = "Bali";
     description.innerHTML = "Which destination do you want to go? <br> Click Bali again to choose this destination"
     image.src = "img/bali.jpg"
@@ -49,6 +52,7 @@ function bali(){
 }
 
 function morocco(){
+    console.log(title);
     title.innerHTML = "Morocco";
     description.innerHTML = "Which destination do you want to go? <br> Click Morocco again to choose this destination"
     image.src = "img/marokko.jpg"
@@ -63,6 +67,7 @@ function morocco(){
 // Vanaf hier komen de functies voor de optie "Bali"
 
 function level1Bali(){
+    console.log(title);
     title.innerHTML = "Bali";
     description.innerHTML = "You choose to go to Bali! How do you want to travel to Bali?";
     image.src = "img/planeship.jpg";
@@ -77,6 +82,7 @@ function level1Bali(){
 }
 
 function plane(){
+    console.log(title);
     title.innerHTML = "Airport";
     description.innerHTML = "You  are going to Bali by plane! <br> It's very busy at the airport, you're thinking about what you can do to kill the time. <br> Maybe grab something to eat, or go to the gate to read a book. What do you want to do?";
     image.src = "img/airport.jpg";
@@ -93,6 +99,7 @@ function plane(){
 }
 
 function eat(){
+    console.log(title);
     title.innerHTML = "Airport";
     description.innerHTML = "You're going to a restaurant to get some food. After you eat, you feel very nauseous. You have some options to do, choose wisely.";
     image.src = "img/restaurant.jpg";
@@ -115,6 +122,7 @@ function eat(){
 }
 
 function hallway(){
+    console.log(title);
     title.innerHTML = "Airport";
     description.innerHTML = "You're on your way to the gate and you see a book on the ground. Are going to pick it up? If you do, you have to leave the items you picked up earlier behind and can't use it anymore.";
     image.src = "img/gang.jpg";
@@ -130,6 +138,7 @@ function hallway(){
 }
 
 function gate(){
+    console.log(title);
     title.innerHTML = "Airport";
     description.innerHTML = "What are you going to do to kill the time?";
     image.src = "img/gate.jpg";
@@ -150,9 +159,10 @@ function gate(){
 }
 
 function ship(){
+    console.log(title);
     title.innerHTML = "Harber";
     description.innerHTML = "You're going to Bali with a big cruise ship. During you trip to the harbor there was a traffic jam. You are really late at the harbor adn you see 2 ships. You don't know which one you have to take. So which one are you going to choose?";
-    image.src = "";
+    image.src = "img/ship.jpg";
     button1.innerHTML = "The left one";
     button2.innerHTML = "The right one";
     button1.setAttribute("onclick", "gameOver5()");
@@ -161,9 +171,10 @@ function ship(){
 }
 
 function right(){
+    console.log(title);
     title.innerHTML = "Harber";
     description.innerHTML = "You choose the right ship! You're on board now and want to kill some time. What are you going to do?";
-    image.src = "";
+    image.src = "img/cruiseship.jpg";
     button1.innerHTML = "Get something to eat.";
     button2.innerHTML = "Take a nap.";
     button1.setAttribute("onclick", "gameOver6()");
@@ -172,9 +183,10 @@ function right(){
 }
 
 function nap(){
-    title.innerHTML = "";
+    console.log(title);
+    title.innerHTML = "Napping time";
     description.innerHTML = "You took a very long time nape, when you woke up the ship is at the first stop. Do you want to get off the ship to explore the city?";
-    image.src = "";
+    image.src = "img/youwon1.jpg";
     button1.innerHTML = "Yes";
     button2.innerHTML = "No";
     button1.setAttribute("onclick", "gameOver7()");
@@ -185,6 +197,7 @@ function nap(){
 // Vanaf hier komen de functies voor optie "Marokko"
 
 function level1Morocco(){
+    console.log(title);
     title.innerHTML = "Morocco";
     description.innerHTML = "You choose to go to Morocco! How do you want to travel to Morocco?";
     image.src = "img/planeship.jpg";
@@ -198,6 +211,7 @@ function level1Morocco(){
 }
 
 function planeMar(){
+    console.log(title);
     title.innerHTML = "Rebook ticket";
     description.innerHTML = "You're going to Morocoo by plane. At the incheck desk they ask you to rebook you ticket, so you can leave right away. What are you going to do?";
     image.src = "img/desk.jpg";
@@ -209,6 +223,7 @@ function planeMar(){
 }
 
 function doNothing(){
+    console.log(title);
     title.innerHTML = "Hallway";
     description.innerHTML = "You're going to go to some tax-free shops. How many are you going to visit?";
     image.src = "img/airport.jpg";
@@ -229,6 +244,7 @@ function input(){
 }
 
 function phone(){
+    console.log(title);
     title.innerHTML = "Phone";
     description.innerHTML = "You went to a few shops and were on time for you flight. The plane is flying and you are in you seatbelt. You remember that you left your phone in your suitcase. Are you going to get it?";
     image.src = "img/plane.jpg";
@@ -241,9 +257,10 @@ function phone(){
 }
 
 function shipMar(){
+    console.log(title);
     title.innerHTML = "Morocco";
     description.innerHTML = "You decided to go to Morocco by ship! You arrive at the harbour and see that you ship is delayed. Are going to wait for the ship or go to the ciry to kill the time?";
-    image.src = "";
+    image.src = "img/ship.jpg";
     button1.innerHTML = "Wait for the ship";
     button2.innerHTML = "Go in to the city";
     button1.setAttribute("onclick", "wait()");
@@ -253,9 +270,10 @@ function shipMar(){
 }
 
 function city(){
+    console.log(title);
     title.innerHTML = "City";
     description.innerHTML = "You went into the city. How many shops are you going to visit?";
-    image.src = "";
+    image.src = "img/shop.jpg";
     button1.innerHTML = "Click on the button";
     button1.setAttribute("onclick", "input1()");
     document.getElementById("button2").style.display = "none";
@@ -273,9 +291,10 @@ function input1(){
 }
 
 function wait(){
+    console.log(title);
     title.innerHTML = "Waiting..";
     description.innerHTML = "You've waited an hour for the ship but when it arrived you remembered that you forgot your bag in your car.";
-    image.src = "";
+    image.src = "img/shipp.jpg";
     button1.innerHTML = "Get your bag";
     button2.innerHTML = "Get on board of the ship";
     button1.setAttribute("onclick", "gameOver12()");
@@ -288,6 +307,7 @@ function wait(){
 // Vanaf hier komen alle gameOver functies
 
 function gameOver(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "It was a stupid option to go by foot to Bali. You didn't make it. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -298,6 +318,7 @@ function gameOver(){
 }
 
 function gameOver1(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went tax-free shopping and forgot the time. Because of this you missed your flight. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -310,6 +331,7 @@ function gameOver1(){
 }
 
 function gameOver2(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went back to the gate while you were feeling nauseous. It got worse and you had to go to the first-aid. Because of this you missed your flight. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -320,6 +342,7 @@ function gameOver2(){
 }
 
 function gameOver3(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You had to wait a very long time at the gate and you did nothing, you fell a sleep and because of this you missed your flight. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -331,6 +354,7 @@ function gameOver3(){
 }
 
 function gameOver4(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went to the first-aid and they thought you had a dangerous infection and brought you to the hospital. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -341,6 +365,7 @@ function gameOver4(){
 }
 
 function gameOver5(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You choose the wrong one, the other ship left before you could enter. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -351,6 +376,7 @@ function gameOver5(){
 }
 
 function gameOver6(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went to eat something. You became really sick. With the next stop you went off board to go to the hospital. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -361,6 +387,7 @@ function gameOver6(){
 }
 
 function gameOver7(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went into the city. When you came back at the ship you have to show you're passport again, but your passport is still on the ship. You can't enter the ship anymore.. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -371,6 +398,7 @@ function gameOver7(){
 }
 
 function gameOver8(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You rebooked you flight, you had to run to your gate, you only had 5 minutes left but you were to late. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -381,6 +409,7 @@ function gameOver8(){
 }
 
 function gameOver9(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went shopping to long. You missed your flight. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -391,6 +420,7 @@ function gameOver9(){
 }
 
 function gameOver10(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went to grabe your phone. The suitcase falls on you head and you're unconsious. You wake up in an hospital in the Netherlands.. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -401,6 +431,7 @@ function gameOver10(){
 }
 
 function gameOver11(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You went shopping to long. You missed your ship. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -411,6 +442,7 @@ function gameOver11(){
 }
 
 function gameOver12(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You ran to your car to get your bag, but when you arrive at the ship again, it's to late to get on board. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -421,6 +453,7 @@ function gameOver12(){
 }
 
 function gameOver13(){
+    console.log(title);
     title.innerHTML = "Game over!";
     description.innerHTML = "You decided to go to Morocco by car but halfway through your car broke down.. That's the end of your holiday..";
     image.src = "img/gameover.jpg";
@@ -434,6 +467,7 @@ function gameOver13(){
 // Vanaf hier komen alle win functies
 
 function win(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "You used some medicine from the medicine-kit and felt better. You were on time at the gate for you flight and your holiday is about to start!";
     image.src = "img/youwon.jpg";
@@ -446,6 +480,7 @@ function win(){
 }
 
 function win1(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "To kill the time at the gate you read the book you found. When the gate opened you entered the plane, and you flew to Bali. Have a nice holiday!";
     image.src = "img/youwon.jpg";
@@ -456,9 +491,10 @@ function win1(){
 }
 
 function win2(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "You decided not to get off the ship. Your journey continues undisturbed. Have a nice holiday!";
-    image.src = "";
+    image.src = "img/youwon1.jpg";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
     document.getElementById("button2").style.display = "none";
@@ -466,9 +502,10 @@ function win2(){
 }
 
 function win3(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "You stayed in your seat and nothing happened. Your journey continues undisturbed. Have a nice holiday!";
-    image.src = "";
+    image.src = "img/youwon.jpg";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
     document.getElementById("button2").style.display = "none";
@@ -476,9 +513,10 @@ function win3(){
 }
 
 function win4(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "You went to just a few shops and were on time at the harbour again. Have a nice holiday!";
-    image.src = "";
+    image.src = "img/youwon1.jpg";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
     document.getElementById("button2").style.display = "none";
@@ -486,9 +524,10 @@ function win4(){
 }
 
 function win5(){
+    console.log(title);
     title.innerHTML = "You won!";
     description.innerHTML = "You got on board of the ship, only without your bag. But you journey continues undisturbed. Have a nice holiday!";
-    image.src = "";
+    image.src = "img/youwon1.jpg";
     button1.innerHTML = "Play again";
     button1.setAttribute("onclick", "begin()");
     document.getElementById("button2").style.display = "none";
